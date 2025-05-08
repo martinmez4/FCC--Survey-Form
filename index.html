@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Formulario de Contacto</title>
+	</head>
+	<body>
+		<!-- presentación -->
+		<div id="presentacion">
+			<h1 id="title" class="presentacion__titulo">Formulario de Contacto</h1>
+			<p id="description" class="presentacion__descripcion">
+				Completá este formulario para que pueda ayudarte a desarrollar el sitio
+				web ideal para tu negocio.
+			</p>
+		</div>
+
+		<div class="container">
+			<form id="survey-form" class="form">
+				<!-- INFORMACION DEL CLIENTE -->
+				<fieldset class="cliente">
+					<legend class="cliente__titulo">Información del cliente</legend>
+
+					<label for="name" id="name-label" class="cliente__dato">
+						Nombre completo:
+						<input
+							type="text"
+							name="name"
+							id="name"
+							required
+							placeholder="Thomas Pérez"
+							class="cliente__info"
+						/>
+					</label>
+
+					<label for="email" id="email-label" class="cliente__dato">
+						Correo electrónico:
+						<input
+							type="email"
+							name="email"
+							id="email"
+							required
+							placeholder="contacto@ejemplo.com"
+							class="cliente__info"
+						/>
+					</label>
+
+					<label for="brand-name" class="cliente__dato">
+						Nombre del negocio:
+						<input
+							type="text"
+							name="brand-name"
+							id="brand-name"
+							placeholder="Brand Name"
+							class="cliente__info"
+						/>
+					</label>
+
+					<label for="dropdown" class="cliente__dato">
+						Rubro del negocio:
+						<select name="rubro" id="dropdown" class="cliente__info" required>
+							<option value="gastronomia">Gastronomía</option>
+							<option value="moda">Moda</option>
+							<option value="servicios-profesionales">
+								Servicios profesionales
+							</option>
+							<option value="belleza">Belleza / Estética</option>
+							<option value="educacion">Educación</option>
+							<option value="hoteleria">Hotelería</option>
+							<option value="otro">Otro</option>
+						</select>
+					</label>
+				</fieldset>
+
+				<!-- TIPO DE WEB -->
+				<fieldset id="web-type" class="web">
+					<legend class="web__titulo">Detalles de la web</legend>
+					<p class="web__descripcion">¿Qué tipo de sitio necesitás?</p>
+
+					<div class="tipo-web">
+						<label for="pagina-institucional" class="tipo-web__dato">
+							<input
+								class="tipo-web__info"
+								id="pagina-institucional"
+								type="radio"
+								name="web-type"
+								value="pagina-institucional"
+								checked
+							/>
+							Página institucional
+						</label>
+
+						<label for="business-account" class="tipo-web__dato">
+							<input
+								class="tipo-web__info"
+								id="business-account"
+								type="radio"
+								name="web-type"
+								value="business-account"
+							/>
+							Tienda online
+						</label>
+
+						<label for="landing-page" class="tipo-web__dato">
+							<input
+								class="tipo-web__info"
+								id="landing-page"
+								type="radio"
+								name="web-type"
+								value="landing-page"
+							/>
+							Landing page
+						</label>
+
+						<label for="blog" class="tipo-web__dato">
+							<input
+								id="blog"
+								type="radio"
+								name="web-type"
+								value="blog"
+								class="tipo-web__info"
+							/>
+							Blog
+						</label>
+
+						<label for="otro" class="tipo-web__dato">
+							<input
+								id="otro"
+								type="radio"
+								name="web-type"
+								value="otro"
+								class="tipo-web__info"
+							/>
+							Otro
+						</label>
+					</div>
+
+					<!-- diseño de la web -->
+					<div class="desing-web">
+						<label for="desing" class="design-web__dato">Estilo visual</label>
+						<select name="desing" id="desing" class="design-web__tipo">
+							<option value="moderno-minimalista">Moderno / Minimalista</option>
+							<option value="elegante-profesional">
+								Elegante / Profesional
+							</option>
+							<option value="colorido-creativo">Colorido / Creativo</option>
+							<option value="rustico-natural">Rústico / Natural</option>
+						</select>
+					</div>
+
+					<!-- presupuesto -->
+					<div class="presupuesto">
+						<span class="presupuesto__titulo">Presupuesto</span>
+						<label for="70-usd" class="presupuesto__dato">
+							<input
+								id="70-usd"
+								type="radio"
+								name="presupuesto"
+								value="70-usd"
+								class="presupuesto-info"
+							/>
+							USD 70
+						</label>
+
+						<label for="150-usd" class="presupuesto__dato">
+							<input
+								id="150-usd"
+								type="radio"
+								name="presupuesto"
+								value="150-usd"
+								class="seccion-presupuesto-input"
+							/>
+							USD 150
+						</label>
+
+						<label for="300-usd" class="presupuesto__dato">
+							<input
+								id="300-usd"
+								type="radio"
+								name="presupuesto"
+								value="300-usd"
+								class="seccion-presupuesto-input"
+							/>
+							USD 300
+						</label>
+					</div>
+
+					<!-- tiempo de entrega -->
+					<div class="tiempo-entrega">
+						<label
+							for="number"
+							id="number-label"
+							class="tiempo-entrega__titulo"
+						>
+							¿En cuántos días necesitás la web terminada?
+						</label>
+						<input
+							type="number"
+							id="number"
+							min="1"
+							max="60"
+							placeholder="20"
+							class="tiempo-entrega__info"
+						/>
+					</div>
+				</fieldset>
+
+				<!-- objetivo de la web -->
+				<fieldset class="objetivo">
+					<label for="bio" class="objetivo__titulo"
+						>¿Qué te gustaría lograr con tu sitio?</label
+					>
+					<textarea
+						id="bio"
+						name="bio"
+						placeholder="Me gustaría captar más clientes..."
+						class="objetivo__mensaje"
+					></textarea>
+				</fieldset>
+
+				<!-- terminos y condiciones -->
+				<div class="terms-and-conditions">
+					<label class="terms-and-conditions__info">
+						<input
+							type="checkbox"
+							id="terms-and-conditions"
+							value="acepta-terminos"
+							required
+						/>
+						Acepto los términos y condiciones del servicio
+					</label>
+					<label class="terms-and-conditions__info">
+						<input
+							type="checkbox"
+							id="terms-of-service"
+							value="acepta-promos"
+						/>
+						Acepto recibir novedades y promociones por correo electrónico
+					</label>
+
+					<input type="submit" value="Enviar" id="submit" class="submit" />
+				</div>
+			</form>
+		</div>
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="derechos-de-autor">
+				<p class="footer__text">Creado por Martín Meza (2025) &#169;</p>
+			</div>
+		</footer>
+	</body>
+</html>
